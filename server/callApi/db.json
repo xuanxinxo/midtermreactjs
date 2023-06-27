@@ -90,45 +90,6 @@
       "description": "Bánh ngon",
       "tinhtranghang": false,
       "id": "CMO5Rpk"
-    },
-    {
-      "name": "Test 1",
-      "price": "30",
-      "image": "https://anhquanbakery.com/uploads/images/Chesse-Cake-2.jpeg",
-      "color": "vang ",
-      "name_category": "sản phẩm hot",
-      "material": "bot gao",
-      "expiry_date": "2019-11-14",
-      "origin": "Viet Nam",
-      "description": "banh ",
-      "tinhtranghang": true,
-      "id": "k9oH2-9"
-    },
-    {
-      "name": "Thong",
-      "price": "70",
-      "image": "https://daylambanh.edu.vn/wp-content/uploads/2019/06/banh-ngot-mang-den-niem-hanh-phuc-cho-tam-hon.jpg",
-      "color": "Hồng",
-      "name_category": "sản phẩm mới",
-      "material": "Bánh trứng",
-      "expiry_date": "2019-11-02",
-      "origin": "Viet Nam",
-      "description": "Adidas UltraBOOST",
-      "tinhtranghang": false,
-      "id": "aQGFi-p"
-    },
-    {
-      "name": "bánh ý",
-      "price": "90",
-      "image": "https://statics.vincom.com.vn/xu-huong/0-0-0-0-tiem-banh/image43.png",
-      "color": "vàng",
-      "name_category": "sản phẩm mới",
-      "material": "Bánh trứng",
-      "expiry_date": "2019-11-06",
-      "origin": "Viet Nam",
-      "description": "bánh ngon",
-      "tinhtranghang": true,
-      "id": "5V-ghxy"
     }
   ],
   "categories": [

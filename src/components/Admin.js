@@ -1,16 +1,9 @@
-// function Admin(){
-//     return(
-//         <h1>Le xuandeptrai</h1>
-//     )
-// }
-// export default Admin;
-
 import React, { Component } from 'react';
 import axios from 'axios';
 import { NavLink, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-class Home extends Component {
+class Admin extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +15,7 @@ class Home extends Component {
   componentDidMount() {
     axios({
       method: 'GET',
-      url: 'http://localhost:3000/products',
+      url: 'http://127.0.0.1:8000/api/products',
       data: null,
     })
       .then(res => {
@@ -40,7 +33,7 @@ class Home extends Component {
     var { products } = this.state;
     axios({
       method: 'DELETE',
-      url: `http://localhost:3000/products/${id}`,
+      url: `http://127.0.0.1:8000/api/products/${id}`,
       data: null,
     }).then(res => {
       if (res.status === 200) {
@@ -90,9 +83,9 @@ class Home extends Component {
               <div id="contentt">
                 <div className="btn-group mt-2 float-left a">
                   <NavLink className="navbar-brand mb-5 ml-4" to="/Add">
-                    <button type="button" className="btn btn-primary">
+                    {/* <button type="button" className="btn btn-primary">
                       Thêm Sản Phẩm
-                    </button>
+                    </button> */}
                   </NavLink>
                 </div>
                 <div className="mt-3 float-left">
@@ -111,11 +104,11 @@ class Home extends Component {
                     <tr>
                       <th className="text-center">STT</th>
                       <th className="text-center">Tên Sản Phẩm</th>
-                      <th className="text-center">Loại Sản Phẩm</th>
+                      {/* <th className="text-center">Loại Sản Phẩm</th> */}
+                      {/* <th className="text-center">Hình ảnh</th> */}
                       <th className="text-center">Hình ảnh</th>
-                      <th className="text-center">Xuất xứ</th>
-                      <th className="text-center">Tình Trạng</th>
-                      <th className="text-center">Hành Động</th>
+                      {/* <th className="text-center">Tình Trạng</th>
+                      <th className="text-center">Hành Động</th> */}
                     </tr>
                   </thead>
                   <tbody>
@@ -135,7 +128,7 @@ class Home extends Component {
 
 class Item extends Component {
   onDelete = id => {
-    if (window.confirm('Bạn Đã Suy Nghĩ Kĩ Chưa???')) {
+    if (window.confirm('Bạn chắc chắn muốn xóa?')) {
       this.props.onDelete(id);
     }
   };
@@ -160,11 +153,11 @@ class Item extends Component {
           <Link to={`/EditProduct/${this.props.product.id}`} type="button" className="btn btn-primary">
             Sửa
           </Link>
-          <NavLink to={`/products/${this.props.product.id}/prodetailadmin`}>
+          {/* <NavLink to={`/products/${this.props.product.id}/prodetailadmin`}>
             <button type="button" className="btn btn-primary ml-1">
               Xem
             </button>
-          </NavLink>
+          </NavLink> */}
           <button type="button" onClick={() => this.onDelete(product.id)} className="btn btn-primary ml-1">
             Xóa
           </button>
@@ -174,5 +167,5 @@ class Item extends Component {
   }
 }
 
-export default Home;
+export default Admin;
 

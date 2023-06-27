@@ -32,7 +32,7 @@ class Add extends Component {
       var id = match.params.id;
       axios({
         method: 'GET',
-        url: `http://localhost:3000/products/${id}`,
+        url: `http://127.0.0.1:8000/api/products/${id}`,
         data: null
       }).then(res => {
         var data = res.data;
@@ -79,7 +79,7 @@ class Add extends Component {
     if (id) {
       axios({
         method: 'PUT',
-        url: `http://localhost:3000/products/${id}`,
+        url: `http://127.0.0.1:8000/api/products/${id}`,
         data: {
           name: name,
           price: price,
@@ -107,7 +107,9 @@ class Add extends Component {
           'xuandeptrai',
           'Product Added Successfully',
           'success'
-        )
+        );
+
+
 
       } else {
         axios({
@@ -130,8 +132,11 @@ class Add extends Component {
             'xuandeptrai',
             'Product Added Successfully',
             'success'
-          )
-            ;
+          );
+          setTimeout(() => {
+            window.location = 'http://localhost:3003/topic'
+          }, 1000)
+
         });
       }
     }
@@ -300,9 +305,9 @@ export default Add;
 //       </div>
 //     </div>
 //   </div>
-// </React.Fragment>  																				
-//       );																				
-//   }																				
+// </React.Fragment>
+//       );
+//   }
 // }
 
 // export default Add;

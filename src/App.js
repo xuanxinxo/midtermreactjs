@@ -17,11 +17,8 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route exact path='/' element={<Home/>}> </Route>
-        <Route exact path='/add' element={<Add/>}> </Route>
+        {/* <Route exact path='/add' element={<Add/>}> </Route> */}
         <Route exact path='/topic' element={<Admin/>}> </Route>
-        <Route exact path='/xoa' element={<Admin/>}> </Route>
-        <Route exact path='/sua' element={<Admin/>}> </Route>
-
       </Routes>
         {/* <Router> */}
         {/* <Add></Add>
